@@ -63,8 +63,7 @@ LINKS=(
 # Nur ein direkter Zugriff auf die RSS-Feeds
 SOCIAL = (
     ('Twitter', 'https://twitter.com/janhkrueger'), 
-    ('gitlab', 'https://gitlab.com/janhkrueger'),
-    ('RSS', 'https://janhkrueger.gitlab.io/blog/feeds/all.rss.xml'),)
+    ('gitlab', 'https://gitlab.com/janhkrueger'),)
 
 # Twitter
 TWITTER_USERNAME='janhkrueger'
