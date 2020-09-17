@@ -46,7 +46,7 @@ DISPLAY_TAGS_ON_SIDEBAR = True
 PLUGIN_PATHS = ['/data/pelican-plugins']
 # Plugin Verwaltung
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-PLUGIN_PATHS = ['/home/blog/pelican-plugins',]
+PLUGIN_PATHS = ['/data/pelican-plugins']
 PLUGINS = ['assets', 'sitemap', 'code_include', 'global_license', 'gallery', 'i18n_subsites', 'series']
 
 
