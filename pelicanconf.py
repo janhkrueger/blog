@@ -19,7 +19,10 @@ OUTPUT_PATH = 'public'
 DEFAULT_METADATA = (('jhk', 'blog'),)
 
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = u'de'
+LOCALE = ('de_DE.utf8')
+SLUGIFY_SOURCE = 'basename'
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
