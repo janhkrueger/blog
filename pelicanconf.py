@@ -64,7 +64,7 @@ LINKS=(
 SOCIAL = (
     ('Twitter', 'https://twitter.com/janhkrueger'), 
     ('gitlab', 'https://gitlab.com/janhkrueger'),
-    ('RSS', 'https://janhkrueger.de/blog/feeds/all.rss.xml'),)
+    ('RSS', 'https://janhkrueger.gitlab.io/blog/feeds/all.rss.xml'),)
 
 # Twitter
 TWITTER_USERNAME='janhkrueger'
