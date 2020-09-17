@@ -4,6 +4,8 @@ pages:
   stage: deploy
   script:
   - apk update && apk add make
+  - git clone https://github.com/getpelican/pelican-themes.git /data/pelican-themes
+  - git clone https://github.com/getpelican/pelican-plugins.git /data/pelican-plugins
   - pip install -r requirements.txt
   - make publish
   artifacts:

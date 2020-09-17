@@ -28,6 +28,28 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+
+THEME = '/data/pelican-themes/pelican-bootstrap3'
+TAG_CLOUD_MAX_ITEMS = 20
+PYGMENTS_STYLE = 'friendly'
+SHOW_ARTICLE_AUTHOR = True
+
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_BREADCRUMBS = False
+DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+DISPLAY_CATEGORIES_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
+
+
+
+PLUGIN_PATHS = ['/data/pelican-plugins']
+# Plugin Verwaltung
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+PLUGIN_PATHS = ['/home/blog/pelican-plugins',]
+PLUGINS = ['assets', 'sitemap', 'code_include', 'global_license', 'gallery', 'i18n_subsites', 'series']
+
+
 # Blogroll, Links im Seitenmenue
 LINKS=(
     ('Piratenpartei','https://piratenpartei.de'),
@@ -52,3 +74,8 @@ CC_LICENSE = 'CC-BY-NC-SA'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+
+# Verhalten von Pages
+WITH_FUTURE_DATES = True
+ABOUT_ME = 'Software Architect. Gamer. Developer of Insulae. Traveler. C++ enthusiast. Pirate.'
