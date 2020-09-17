@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 # Generelle Blogeinstellungen
 AUTHOR = u'Jan H. Krueger'
 SITENAME = u'JHK Blog'
-SITEURL = 'https://janhkrueger.de/blog/'
+SITEURL = 'https://janhkrueger.gitlab.io/blog/'
 SITESUBTITLE = 'Das private Blog von Jan H. Krueger'
 TIMEZONE = 'Europe/Berlin'
 
