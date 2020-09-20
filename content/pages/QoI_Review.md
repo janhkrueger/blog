@@ -1,8 +1,8 @@
 Title: QoI Review
 Date: 2019-03-22 08:27
 Author: Jan H. Krüger
-Tags: 
-Status: Draft
+Slug: qoireview
+Status:hidden
 
 **Handwerklich**
 
