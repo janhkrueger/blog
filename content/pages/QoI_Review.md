@@ -40,7 +40,7 @@ Status:hidden
 
 Auszug aus der Stadtauswertung:
 
-![QoI_StadtAuswertung](images/QoI_AuszugStadtVerwaltung.png)
+![QoI_StadtAuswertung](../images/QoI_AuszugStadtVerwaltung.png)
 
 **Verstoß gegen DRY (Don&#39;t repeat yourself) (Zweimal!)**
 
@@ -66,9 +66,9 @@ Die Division durch 1000 kann wegfallen wenn die Verbrauchsmenge direkt durch 100
 
 (Liese sich mit Klassenattributen mindestens an zwei Stellen auf Monadic runter gehen.)
 
-!![QoI_Dyad](images/QoI_Dyad.png)
+!![QoI_Dyad](../images/QoI_Dyad.png)
 
-![QoI_Dyad2](images/QoI_Dyad2.png)
+![QoI_Dyad2](../images/QoI_Dyad2.png)
 
 Insgesamt jedoch, ohne Klassen: unnötig kompliziert. Ohne Datenbank in welcher die Steuergrößen stehen, unnötig kompliziert.
 
@@ -137,4 +137,4 @@ Erfahrung kann nicht durch lesen im Internet gesammelt werden sondern nur durch 
 
 **Multitierarchitektur**
 
-![QoI_MultiTierArchitektur](images/QoI_MultiTierArchitektur.png)
+![QoI_MultiTierArchitektur](../images/QoI_MultiTierArchitektur.png)
