@@ -45,9 +45,8 @@ DISPLAY_CATEGORIES_ON_SIDEBAR = True
 DISPLAY_TAGS_ON_SIDEBAR = True
 
 
-
-PLUGIN_PATHS = ['/data/pelican-plugins']
 # Plugin Verwaltung
+PLUGIN_PATHS = ['/data/pelican-plugins']
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 PLUGIN_PATHS = ['/data/pelican-plugins']
 PLUGINS = ['assets', 'sitemap', 'code_include', 'global_license', 'gallery', 'i18n_subsites', 'series']
@@ -57,7 +56,8 @@ PLUGINS = ['assets', 'sitemap', 'code_include', 'global_license', 'gallery', 'i1
 LINKS=(
     ('Piratenpartei','https://piratenpartei.de'),
     ('Free Software Foundation Europe','https://fsfe.org'),
-    ('The game without name','http://tgwnn.rpgame.de/'),)
+    ('The game with no name','https://tgwnn.rpgame.de/'),
+    ('Quest of Islands', 'https://www.questofislands.com/'),)
 
 # Social widget
 # Nur ein direkter Zugriff auf die RSS-Feeds
