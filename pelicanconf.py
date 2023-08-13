@@ -18,7 +18,7 @@ OUTPUT_PATH = 'public'
 # global metadata to all the contents
 DEFAULT_METADATA = (('jhk', 'blog'),)
 
-STATIC_PATHS = ['extra/robots.txt']
+STATIC_PATHS = ['extras/robots.txt']
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': '/robots.txt'}
 }
