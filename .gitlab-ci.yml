@@ -6,6 +6,7 @@ pages:
   - apk update && apk add make git gettext
   - git clone https://github.com/getpelican/pelican-themes.git /data/pelican-themes
   - git clone https://github.com/getpelican/pelican-plugins.git /data/pelican-plugins
+  - pip install --upgrade pip
   - pip install -r requirements.txt
   - pip install pelican --upgrade
   - make publish
