@@ -18,6 +18,8 @@ OUTPUT_PATH = 'public'
 # global metadata to all the contents
 DEFAULT_METADATA = (('jhk', 'blog'),)
 
+# A list of files to copy from the source to the destination
+FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
 
 DEFAULT_LANG = u'de'
 LOCALE = ('de_DE.utf8')
@@ -65,9 +67,6 @@ SOCIAL = (
     ('Twitter', 'https://twitter.com/janhkrueger'), 
     ('gitlab', 'https://gitlab.com/janhkrueger'),)
 
-# Twitter
-TWITTER_USERNAME='janhkrueger'
-TWITTER_CARDS=True
 
 DEFAULT_PAGINATION = 5
 
