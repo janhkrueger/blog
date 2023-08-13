@@ -24,7 +24,7 @@ Installation waren alle Optionen deaktiviert.
 Hier mal ein Beispiel wie Extended Options bei mir nun die MetaTags
 erzeugt:  
 
-~~~~ {lang="HTML"}
+~~~~ HTML
 ~~~~
 
   

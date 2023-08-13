@@ -30,8 +30,10 @@ so nebenbei bemerkt, kein valides HTML mehr vorherrscht. Um genau zu
 sein, so sieht der Code aus wie die Banner eingebaut wurden:  
   
 
-~~~~ {lang="HTML"}
+~~~~HTML
 ~~~~
+
+https://janhkrueger.gitlab.io/blog/
 
 </div>
 <p>
