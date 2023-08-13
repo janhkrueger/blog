@@ -37,8 +37,8 @@ Mechanize verarbeitet es automatisch wenn der Webserver direkt auf eine
 andere Seite weiterleitet.  
   
 
-~~~~ {lang="python"}
-br.select_form(nr=0) br['FORMFELD1']=(usern) br['FORMFELD2']=(passw) response2=br.submit() 
+~~~~ python
+br.open("http://www.example.de/example.php")
 ~~~~
 
 <p>
@@ -54,8 +54,8 @@ Index des gewuenschten Formulaeres ermitteln. Kann, aber fuer den
 einfachen Funktionstest reicht es.  
   
 
-~~~~ {lang="python"}
-htmlinhalt = response.read()
+~~~~ python
+br.open("http://www.example.de/example.php")
 ~~~~
 
 <p>
@@ -67,8 +67,8 @@ ideal wenn ich dann anschliessend htmlinhalt mittels Regular Expressions
 auswerte.  
   
 
-~~~~ {lang="python"}
-print br.geturl()
+~~~~ python
+br.open("http://www.example.de/example.php")
 ~~~~
 
 <p>
@@ -114,8 +114,8 @@ Da sich mechanize also Browser ausgibt, kann ich ihm auch mitgeben als
 welcher Browser es sich ausgibt.  
   
 
-~~~~ {lang="python"}
-br.addheaders = [ ("User-agent", "Mozilla/5.0 (compatible)") ]
+~~~~ python
+br.open("http://www.example.de/example.php")
 ~~~~
 
   
