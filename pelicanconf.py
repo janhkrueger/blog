@@ -18,8 +18,10 @@ OUTPUT_PATH = 'public'
 # global metadata to all the contents
 DEFAULT_METADATA = (('jhk', 'blog'),)
 
-# A list of files to copy from the source to the destination
-FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
+STATIC_PATHS = ['extra/robots.txt']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': '/robots.txt'}
+}
 
 DEFAULT_LANG = u'de'
 LOCALE = ('de_DE.utf8')
