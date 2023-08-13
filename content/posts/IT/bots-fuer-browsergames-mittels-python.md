@@ -26,7 +26,7 @@ der Anmeldung erledigt. Konkret sind ein nur ein paar Befehle relevant
 um Daten aus einem Spiel auszulesen und dann zu verwerten.  
   
 
-~~~~ {lang="python"}
+~~~~ python
 br.open("http://www.example.de/example.php")
 ~~~~
 
