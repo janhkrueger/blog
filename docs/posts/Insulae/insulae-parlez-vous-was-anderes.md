@@ -7,9 +7,9 @@ Slug: insulae-parlez-vous-was-anderes
 In den letzten Wochen war es etwas still um Insulae. Das liegt
 mitnichten daran das ich nichts getan habe, sondern eher daran das ich
 viel mehr Hintergrundarbeiten erledigt habe. Ein großer Teil davon ist
-die Lokalisierung.  
-  
-Konkret bin ich an drei "Meilensteinen" dran:  
+die Lokalisierung.
+
+Konkret bin ich an drei "Meilensteinen" dran:
 
 -   Umstellung von Insulae auf Python mittels Django als Web-Framework
 -   Entwicklung eines reinen Admin- und Moderatorenpanels zur
@@ -18,41 +18,32 @@ Konkret bin ich an drei "Meilensteinen" dran:
     arbeiten
 
 <p>
-  
+
 Also doch schon drei große Teile. Im Adminpanel ich ich derzeit am
 weitesten, wobei die Entwicklung hierbei Hand in Hand mit dem driten
 Punkt geht. Ist auch eine gute Übung bevor ich das ganze mit dem
 eigentlichen Spiel vorrantreibe. Die Anpassungen an die Django-Templates
 sind hierbei auch sehr einfach zu sehen. Zu Beginn eines Templates muss
 Django mitgeteilt werden das für dieses Template eine Übersetzung
-versucht werden soll. Schnell getan mittels folgendem Zusatz welcher in
-die erste Zeile kommt:  
-
-~~~~ {lang="python"}
-{% load i18n %}
-~~~~
-
+versucht werden soll.
 <p>
-  
-  
+
+
 Nun ja, und danach ist eigentlich alles genauso einfach. An jede Stelle
 an die ich bisher einen festen String mit einem Wort eingegeben habe,
 ersetze ich eine bestimmte Codezeile im Template. Will ich zum Beispiel
 das der auf deutsch benannte Link "`Eigene Nachrichten`" je nach
 unterstützter Sprache übersetzt wird, teile ich dies dem Template wie
-folgt mit  
+folgt mit
 
-~~~~ {lang="python"}
-{% trans "Eigene Nachrichten" %}
-~~~~
 
 <p>
-  
-  
+
+
 Das kann ich direkt während der Erstellung eines neuen Templates
 angeben. So sehe ich in dieser Phase was ich an dieser Stelle bezwecken
-will, ohne weitere Anpassungen.  
-  
+will, ohne weitere Anpassungen.
+
 Schön und gut, aber wie kann ich nun dafür sorgen das die Zeichenkette
 "Eigene Nachrichten" für einen englischsprachigen Benutzer eben in
 Englisch angezeigt wird? Zu erst muss eine Liste mit den zu
@@ -60,11 +51,11 @@ Englisch angezeigt wird? Zu erst muss eine Liste mit den zu
 zu leisten. Im Verzeichnis meines Django-Projelktes, Insulae, habe ich
 einen weiteren Ordner mit dem Namen "`locale`" angelegt. Dies muss
 manuell getan werden. Die Verzeichnisstruktur sieht dann also wie folgt
-aus, nun nachdem ich den Ordner angelegt habe:  
-  
-![Verzeichnisstruktur Djangp-Projekt][]  
-Wobei das nur die Struktur auf meinem Ausweichrechner ist.  
-  
+aus, nun nachdem ich den Ordner angelegt habe:
+
+![Verzeichnisstruktur Djangp-Projekt][]
+Wobei das nur die Struktur auf meinem Ausweichrechner ist.
+
 Nachdem das Verzeichnis angelegt ist, kann Django angewiesen werden alle
 Quelldateien zu durchsuchen und alle wie oben gekennzeichneten Strings
 auszugeben. Beim Aufruf von django-admin.py sind noch ein paar Parameter
@@ -75,71 +66,45 @@ die die Übersetzung angelegt werden soll. Dies geschieht mittels
 `-e `angegeben werden, dass nicht nur die üblichen Quelldateien
 analysiert werden sollen, sondern eben alle mit den angegebenen
 Endungen. Der Parameter `-a` gibt an, das ich eine bereits bestehende
-Liste aktualiseren will, und nicht immer wieder eine leere. Für mich
-sieht nun konkret der Aufruf wie folgt aus:  
-
-~~~~ {lang="python"}
-django-admin.py makemessages -l de -e phtml -a
-~~~~
+Liste aktualiseren will, und nicht immer wieder eine leere.
 
 <p>
-  
-bzw. für eine englische Sprachversion:  
 
-~~~~ {lang="python"}
-django-admin.py makemessages -l en -e phtml -a
-~~~~
 
-<p>
-  
-  
 Daraufhin entstehen neue Unterverzeichnisse in locales. Bei mir konkret
 habe ich dann `$PROJECTPATH/locale/de/LC_MESSAGES/` Dort liegt nun eine
 Datei namens django.po bzw. auch für englisch ein entsprechender
 en-Unterordner. Diese .po-Datei ist im Grunde nur eine Textdatei in der
 alle Strings welche ich für eine Übersetzung vorgesehen habe enthalten
-sind in folgendem Format:  
-  
-Deutsch:  
-
-~~~~ {lang="python"}
-#: .\templates\spieler.phtml.py:112#, fuzzymsgid "Accountdaten bearbeiten"msgstr ""
-~~~~
-
+sind in folgendem Format.
 <p>
-  
-  
+
+
 msgid gibt den zu übersetzenden String an, msgstr den Zielstring. Wird
 dieser leer gelassen, wird einfach msgid ausgegeben. So brauche ich
 keine doppelten Nennungen vorhalten. In der .po-Datei für die englischen
-Seiten trage ich nun die Übersetzung ein und erhalte folgendes:  
-Englisch:  
+Seiten trage ich nun die Übersetzung ein.
 
-~~~~ {lang="python"}
-#: .\templates\spieler.phtml.py:112#, fuzzymsgid "Accountdaten bearbeiten"msgstr "Edit Account"
-~~~~
 
-  
-  
 Nun ist diese Vorlage noch umzusetzen. Dies wird wieder von django-admin
 erledigt, bis auf den ersten Parameter sind keine weiteren notwendig. Es
 werden grundsätzlich alle Sprachen die wie oben angelegt wurden
-verarbeitet.  
-django-admin.py compilemessages  
+verarbeitet.
+django-admin.py compilemessages
 Dies erzeugt nun in zusätzlich zu den .po-Dateien Dateien mit der Endung
 .mo. Nun ja, das wars. Da meine Browser hier persönlich immer deutsch,
 also deDE als Locale liefern, ich aber ggf. eine englische Übersetzung
 auch testen will, kann dies in der settings.py des Django-Projectes auch
 eingestellt werden. Dort trage ich ind er Regel
 `LANGUAGE_CODE = 'de-DE'` ein. Will ich jedoch die englischen Texte
-lesen, ändere ich dies einfach auf `LANGUAGE_CODE = 'en-EN'`. Fertig.  
-  
+lesen, ändere ich dies einfach auf `LANGUAGE_CODE = 'en-EN'`. Fertig.
+
 Das ist nun alles was als Basis notwendig ist. Wenn eine neue Sprache
 eingepflegt werden soll, kann einfach eine neue wie oben beschrieben
 angelegt werden und einem übersetzungswilligen Spieler / Mitarbeiter
 gegeben werden. Wenn diese zurückkommt, einfach mittels compilemessages
-bearbeiten und schon steht eine neue Sprache zur Verfügung.  
-  
+bearbeiten und schon steht eine neue Sprache zur Verfügung.
+
 Ok, war jetzt mehr ein Ausflug wie in Django i18N genutzt wird. Macht
 aber nichts. Für alle die Fragen, in Insulae tut soch noch was, aber
 eben eher im Hintergrund. Einzig eine Sache wird schon partiell genutzt.
